@@ -57,7 +57,7 @@ function createInjectionType(type) {
         }
     }
 }
-export const [rest, service, repo, websocket] = ['rest', 'service', 'repo', 'websocket'].map(createInjectionType);
+const [rest, service, repo, websocket] = ['rest', 'service', 'repo', 'websocket'].map(createInjectionType);
 
 function inject(target, prop, descriptor) {
     descriptor.writable = true;

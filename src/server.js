@@ -27,9 +27,9 @@ koa
     .use(KoaBodyParser())
     .use(koaRouter.routes())
     .use(koaRouter.allowedMethods())
-    .listen(3000);
+    .listen(8080);
 
-console.log('Dashboard API is listening on port 3000');
+console.log('Dashboard API is listening on port 8080');
 
 //Simulate stock's price changed
 setInterval(function () {
