@@ -1,15 +1,14 @@
 {
-  "name": "dashboard-api",
+  "name": "rest-apis-assignment",
   "version": "1.0.0",
-  "description": "Dashboard API",
+  "description": "REST APIs",
   "main": "src/server.js",
+  "author": "coe@kms-technology.com",
+  "license": "(C) 2016 KMS Technology",
   "scripts": {
     "serve": "./node_modules/.bin/babel-node ./src/server.js",
     "esdoc": "./node_modules/.bin/esdoc -c esdoc.json"
   },
-  "keywords": [],
-  "author": "kms-technology",
-  "license": "ISC",
   "dependencies": {
     "core-decorators": "^0.12.3",
     "koa": "^2.0.0-alpha.5",

@@ -10,7 +10,9 @@ import recursive  from 'recursive-readdir-sync';
 function restContext(contextPath) {
     return function (target) {
         target.$rest = true;
-        target.$rest_context_path = contextPath;
+
+        // context path with '/api' prefix by default
+        target.$rest_context_path = '/api' + contextPath;
     }
 }
 
