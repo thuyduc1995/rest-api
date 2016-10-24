@@ -54,7 +54,7 @@ export class LokiAbstractRepo {
     }
 
     findOne(criteria) {
-        return aliasId(this.getCollection().findOne(criteria));
+        return this.aliasId(this.getCollection().findOne(criteria));
     }
 
     find(criteria) {
