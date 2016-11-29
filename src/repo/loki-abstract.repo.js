@@ -35,13 +35,13 @@ export class LokiAbstractRepo {
     }
 
     insert(doc) {
-        return this.getCollection().insert(doc);
+        return this.aliasId(this.getCollection().insert(doc));
     }
 
     update(doc) {
         const exists = this.getCollection().get(doc.id);
 
-        if (exists) return this.getCollection().update(Object.assign(exists, doc));
+        if (exists) return this.aliasId(this.getCollection().update(Object.assign(exists, doc)));
 
         return this.insert(doc);
     }
