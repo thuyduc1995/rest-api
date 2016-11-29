@@ -19,6 +19,7 @@ export class LokiAbstractRepo {
     }
 
     aliasId(doc) {
+        if(!doc) return doc;
         doc = Object.assign({}, {id: doc.$loki}, doc);
         delete doc.$loki;
         return doc;
