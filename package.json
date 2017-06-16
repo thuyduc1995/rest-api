@@ -13,6 +13,7 @@
     "core-decorators": "^0.12.3",
     "koa": "^2.0.0-alpha.5",
     "koa-bodyparser": "^2.2.0",
+    "koa-cors": "0.0.16",
     "koa-jwt": "^1.2.0",
     "koa-router": "^5.4.0",
     "koa-socket": "^4.4.0",
