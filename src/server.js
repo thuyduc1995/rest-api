@@ -8,6 +8,7 @@ import KoaJwt from 'koa-jwt';
 import Loki from 'lokijs';
 import KoaStatic from 'koa-static-folder';
 import KoaSocketIO from 'koa-socket';
+import cors from 'koa-cors';
 
 let lokiDb = new Loki('./database.json', {autosave: true, autosaveInterval: 5000, autoload: true}),
     socketIO = new KoaSocketIO(),
@@ -23,7 +24,8 @@ socketIO
 
 koa
     // .use(KoaJwt({secret: 'fcp'}).unless({path: [/^\/esdoc/]}))
-    // .use(KoaStatic('./esdoc'))
+    // .use(KoaStatic('./esdoc'))\
+    .use(cors())
     .use(KoaBodyParser())
     .use(koaRouter.routes())
     .use(koaRouter.allowedMethods())
